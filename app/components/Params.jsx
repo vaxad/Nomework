@@ -25,7 +25,7 @@ export default function Params() {
         }
     console.log(data);
     try {
-    const resd = await fetch('http://localhost:4000/textprompt/', {
+    const resd = await fetch('https://nomework-api2.onrender.com/textprompt/', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
