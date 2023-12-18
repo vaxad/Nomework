@@ -96,7 +96,7 @@ export default function Params() {
                 <select id="mistakes" style={{width: "100%"}}>
                   <option
                     selected
-                    value="kids"
+                    value="no"
                   >
                     None
                   </option>
