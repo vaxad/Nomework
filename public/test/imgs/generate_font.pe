@@ -1,0 +1,15 @@
+# generate_font.pe
+
+Open($1)  # Open a new font
+SetFontNames("MyGeneratedFont", "Regular")  # Set font names
+
+charIndex = 65  # Unicode code point for 'A'
+
+ForEach $*  # For each image file passed as arguments
+    Import($u)  # Import the image as a glyph
+    ScaleToEm(1000, 1000)  # Set scaling
+    SetGlyphName("uni{:04X}".format(charIndex))  # Set glyph name
+    charIndex += 1
+EndForEach
+
+Generate("output_font.ttf")  # Generate the TTF font file
