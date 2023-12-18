@@ -37,7 +37,7 @@ export default function Landing() {
           </svg>
         <div className=' w-screen h-screen -z-10 absolute top-0 ' style={{backgroundImage:"var(--background-primary)"}}></div>
         </div>
-            <p className=' text-xs md:text-base lg:text-lg w-11/12 md:w-10/12 lg:w-9/12' style={{ textAlign: "center", marginTop: "2rem"}}>Whether you're a kid, teenager, or adult, craft assignments effortlessly and download them as individual images or a complete PDF. Unleash your creativity and enhance your writing experience with <b>Nomework</b>!</p>
+            <p className=' text-xs md:text-base lg:text-lg w-11/12 md:w-10/12 lg:w-9/12' style={{ textAlign: "center", marginTop: "2rem"}}>Whether you&apos;re a kid, teenager, or adult, craft assignments effortlessly and download them as individual images or a complete PDF. Unleash your creativity and enhance your writing experience with <b>Nomework</b>!</p>
             {/* <!-- <div style="textAlign: center; marginTop: 2rem;">
                 <a href="https://saurabhdaware.github.io/text-to-handwriting" style="padding: 1rem 2rem; backgroundColor: #fff; color: #000; border-radius: 5px; fontSize: 1.5rem; text-decoration: none;">Go to Text to Handwriting</a>
             </div> --> */}

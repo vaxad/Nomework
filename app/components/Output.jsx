@@ -7,7 +7,7 @@ export default function Output() {
       <section>
         <h2 id="output-header">Output</h2>
         <div id="output" className="output lg:p-[30px] p-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-10 overflow-x-scroll " style={{textAlign: "center"}}>
-          Click "Generate Image" Button to generate new image.
+          Click &quot;Generate Image&quot; Button to generate new image.
         </div>
         <div className=' flex flex-col lg:flex-row gap-10 w-full justify-center items-center' style={{textAlign: "center", padding: "30px"}}>
           <button className="imp-button" id="download-as-pdf-button" style={{backgroundColor: "#434343", color: "aliceblue"}}>
