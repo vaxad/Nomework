@@ -1,5 +1,8 @@
 import Navbar from './components/Navbar'
 import './globals.css'
+import { Inter } from 'next/font/google'
+
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Nomework',
@@ -15,7 +18,7 @@ export default function RootLayout({ children }) {
       href="https://fonts.googleapis.com/css?family=Homemade+Apple|Roboto|Caveat|Liu+Jian+Mao+Cao&display=swap"
     />
       </head>
-      <body>
+      <body className={inter.className}>
         
     <script defer src="https://unpkg.com/jspdf@^1/dist/jspdf.min.js"></script>
     <Navbar/>

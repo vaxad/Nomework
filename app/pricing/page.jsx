@@ -35,13 +35,13 @@ export default function Page() {
     ]
     
       
-      const PricingCard = ({pricing}) => {
+      const PricingCard = ({pricing,index}) => {
         return(
-            <div className=' w-full rounded-xl border-2 border-transparent flex flex-col justify-start items-center shadow-md shadow-slate-900 p-10 hover:border-purple-700' style={{backgroundColor:"var(--featureCard-bg)"}}>
+            <div className={` border-2 ${index%3==1?" scale-110 border-purple-500 ":"scale-100 border-slate-500"} w-full rounded-xl border-2 border-transparent flex flex-col justify-start items-center shadow-md shadow-slate-900 p-10 hover:border-purple-800`} style={{backgroundColor:"var(--featureCard-bg)"}}>
                 <h1 className=' text-4xl text-center py-2 underline break-words w-full flex-wrap decoration-purple-600'>{pricing.planName}</h1>
                 <p className=' italic text-xs text-center'>{pricing.tagline}</p>
                 <h1 className=' text-4xl py-5'><span className=' text-lg'>$</span>{pricing.price}<span className=' text-lg'>/mo</span></h1>
-                <hr className=' w-full my-2'/>
+                <hr className=' w-full mb-4'/>
                 <div className=' flex flex-col justify-start w-full gap-8 items-start'>
                   {pricing.benefits.map((benefit, index)=>(
                     <div key={index} className=' flex flex-row gap-5 items-center'>
@@ -60,10 +60,10 @@ export default function Page() {
       }
   return (
     <div className=' min-h-screen px-5 lg:px-24 py-12 flex flex-col justify-center items-center w-full gap-10'>
-        <h1 className=' text-4xl text-center'>Pricing Plans😋</h1>
+        <h1 className=' text-4xl pb-10 text-center'>Pricing Plans😋</h1>
         <div className=' grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 w-full'>
             {pricings.map((pricing, index)=>(
-                <PricingCard key={index} pricing={pricing}/>
+                <PricingCard key={index} index={index} pricing={pricing}/>
             ))}
         </div>
         

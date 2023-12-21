@@ -28,16 +28,8 @@ export default function Landing() {
           left: "50%",
           transform: "translate(-50%, -110%)",
           backgroundImage: "linear-gradient(to right, #b3ffab 0%, #12fff7 100%)",
-        //   clip: "var(--clipPath)"
           }}></div>
-          {/* <!-- <div style=" border-radius: 100%; width: 300px; height: 300px;position: absolute; z-index: -3; 
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -70%);
-          background-image: linear-gradient(to right, #21D4FD 0%, #B721FF 100%);
-          clip: rect(220px, 260px, 500px, -150px);
-          "></div> --> */}
-            <h1 className=' scale-90 lg:scale-100 md:scale-100' style={{fontSize: "3rem", textAlign: "center", backgroundImage: "linear-gradient(to right, #21D4FD, #B721FF)", paddingTop: "10vh",
+            <h1 className='logoText scale-90 lg:scale-100 md:scale-100' style={{fontSize: "3rem", textAlign: "center", backgroundImage: "linear-gradient(to right, #21D4FD, #B721FF)", paddingTop: "10vh",
             color: "transparent",
             marginTop : "5vh",
             marginBottom:"5vh",
@@ -54,7 +46,7 @@ export default function Landing() {
             id="scrollButton" fill="#fff" x="0px" y="0px" width="24" height="24" viewBox="0 0 24 24">
               <path d="M 2 3 L 2 10.5 L 17 12 L 2 13.5 L 2 21 L 22 12 L 2 3 z"></path>
           </svg>
-        <div className={` w-screen h-[${isLandingVisible?"50":"100"}vh] -z-10 absolute top-0 `} style={{backgroundImage:"var(--background-primary)"}}></div>
+        {/* <div className={` w-screen min-h-[20vh] -z-10 absolute top-0 `} style={{backgroundImage:"var(--background-primary)"}}></div> */}
         </div>
             <p className=' text-xs md:text-base lg:text-lg w-11/12 md:w-10/12 lg:w-9/12' style={{ textAlign: "center", marginTop: "2rem"}}>Whether you&apos;re a kid, teenager, or adult, craft assignments effortlessly and download them as individual images or a complete PDF. Unleash your creativity and enhance your writing experience with <b>Nomework</b>!</p>
             {/* <!-- <div style="textAlign: center; marginTop: 2rem;">
@@ -63,7 +55,7 @@ export default function Landing() {
             <div className=' h-full flex flex-col justify-center items-center w-full lg:hidden md:hidden '>
                 <img src="/landing.png" alt="" className=' w-4/5 mt-5' />
             </div>
-            <button onClick={()=>{scrollToDiv('landing')}} className={` ${isLandingVisible?"hidden":""} fixed bottom-10 right-10 p-2 text-xl shadow-md shadow-slate-400 rounded-full`} style={{backgroundColor: "var(--primary-button-color)", color: "var(--primary-button-text-color)"}}>
+            <button onClick={()=>{scrollToDiv('landing')}} className={` ${isLandingVisible?"hidden":""} fixed bottom-10 right-10 p-2 text-xl shadow-md shadow-slate-900 rounded-full`} style={{backgroundColor: "var(--primary-button-color)", color: "var(--primary-button-text-color)"}}>
             <svg xmlns="http://www.w3.org/2000/svg" className=' rotate-90' x="0px" fill='currentColor' y="0px" width="50" height="50" viewBox="0 0 50 50">
 <path d="M 25 2 C 12.308594 2 2 12.308594 2 25 C 2 37.691406 12.308594 48 25 48 C 37.691406 48 48 37.691406 48 25 C 48 12.308594 37.691406 2 25 2 Z M 25 4 C 36.609375 4 46 13.390625 46 25 C 46 36.609375 36.609375 46 25 46 C 13.390625 46 4 36.609375 4 25 C 4 13.390625 13.390625 4 25 4 Z M 27.875 14 C 27.652344 14.023438 27.441406 14.125 27.28125 14.28125 L 17.28125 24.28125 C 17.085938 24.46875 16.976563 24.730469 16.976563 25 C 16.976563 25.269531 17.085938 25.53125 17.28125 25.71875 L 27.28125 35.71875 C 27.679688 36.117188 28.320313 36.117188 28.71875 35.71875 C 29.117188 35.320313 29.117188 34.679688 28.71875 34.28125 L 19.4375 25 L 28.71875 15.71875 C 29.042969 15.417969 29.128906 14.941406 28.933594 14.546875 C 28.742188 14.148438 28.308594 13.929688 27.875 14 Z"></path>
 </svg>

@@ -39,8 +39,8 @@ export default function Page() {
             <div className=' w-full rounded-xl flex md:flex-row flex-col justify-start gap-10 shadow-sm hover:scale-105 transition-all shadow-slate-900 items-center p-10' style={{backgroundColor:"var(--featureCard-bg)"}}>
                 <h1 className=' text-4xl p-5 bg-purple-500 rounded-full'>{feature.icon}</h1>
                 <div className=' flex flex-col justify-start w-full items-start'>
-                    <h1 className=' text-2xl'>{feature.title}</h1>
-                    <p className=' text-lg'>{feature.description}</p>
+                    <h1 className=' text-2xl w-full text-center md:text-left'>{feature.title}</h1>
+                    <p className=' text-lg w-full text-center md:text-left'>{feature.description}</p>
                     </div>
             </div>
         )

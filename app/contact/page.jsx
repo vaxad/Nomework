@@ -5,7 +5,7 @@ const ArcCard = ({ name, title, url, college, img }) => {
     const boundingRef = useRef(null);
 
     return (
-        <div className='[perspective:800px] w-full col-span-1 flex justify-center items-center'>
+        <div className='[perspective:800px] w-full h-full col-span-1 flex justify-center items-center'>
             <div onMouseLeave={() => (boundingRef.current = null)}
                 onMouseEnter={(ev) => {
                     boundingRef.current = ev.currentTarget.getBoundingClientRect();
@@ -24,11 +24,11 @@ const ArcCard = ({ name, title, url, college, img }) => {
                     ev.currentTarget.style.setProperty("--x", `${xPercentage * 100}%`);
                     ev.currentTarget.style.setProperty("--y", `${yPercentage * 100}%`);
                 }}
-                className="group relative flex flex-col gap-2 flex-grow w-full  rounded-md p-4 bg-[var(--primary-button-bg)] text-purple-600 transition-transform ease-out hover:[transform:rotateX(var(--x-rotation))_rotateY(var(--y-rotation))_scale(1.06)]"
+                className="group relative flex flex-col gap-2 flex-grow w-full h-full rounded-md p-4 bg-[var(--primary-button-bg)] text-purple-600 transition-transform ease-out hover:[transform:rotateX(var(--x-rotation))_rotateY(var(--y-rotation))_scale(1.06)]"
             >
                 {/* <figure className="rounded-md mix-blend-multiply [background-image:radial-gradient(at_70%_40%,transparent_30%,currentColor_80%),url(/noise.svg)]" /> */}
                 <div className=' w-full h-full'><img className='[perspective:1000px] hover:shadow-xl shadow-slate-700 transition-all  w-full rounded-md  object-fill aspect-square' src={img}></img></div>
-                <div className="pt-4">
+                <div className="pt-4 h-full">
                     <p className="text-2xl font-bold">{name}</p>
                     <p className="text-lg">{title}</p>
                 </div>
