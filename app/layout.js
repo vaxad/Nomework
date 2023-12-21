@@ -1,3 +1,4 @@
+import Navbar from './components/Navbar'
 import './globals.css'
 
 export const metadata = {
@@ -17,6 +18,7 @@ export default function RootLayout({ children }) {
       <body>
         
     <script defer src="https://unpkg.com/jspdf@^1/dist/jspdf.min.js"></script>
+    <Navbar/>
         {children}</body>
     </html>
   )

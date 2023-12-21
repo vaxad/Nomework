@@ -79,7 +79,7 @@ export default function Home() {
             doc.addPage();
           }
         }
-        doc.save();
+        doc.save("nomework.pdf");
       }
 
       function formatText(event) {
@@ -156,13 +156,6 @@ export default function Home() {
         }
       }
 
-      function moveLeftFunc(index) {
-        moveLeft(Number(index));
-        // Displaying no. of images on deletion
-        renderOutput(outputImages);
-        // When output changes, we have to set remove listeners again
-        setRemoveImageListeners();
-      }
       function renderOutput(outputImages) {
         if (outputImages.length <= 0) {
           document.querySelector('#output').innerHTML =
@@ -178,7 +171,7 @@ export default function Home() {
           .map(
             (outputImageCanvas, index) => /* html */ `
     <div 
-      class="output-image-container flex flex-col items-center justify-center w-fit relative" 
+      class="output-image-container" style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%;position: relative;"  
     >
       <button 
         data-index="${index}" 
@@ -764,7 +757,6 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-center ">
-      <Navbar />
       <Landing />
       <Background />
       <Params />

@@ -6,7 +6,16 @@ export default function Params() {
         var element = document.getElementById(elementId);
         element.scrollIntoView({ behavior: 'smooth' });
     }
+    function increaseWaves(scale){
+      const waveElements = document.getElementsByClassName("waves");
+              const waveArray = Array.from(waveElements);
+              waveArray.forEach((element)=>{
+              element.style.transform = `scaleY(${scale}) scaleX(${scale+0.8})`
+              })
+    }
     async function getData(){
+      
+    increaseWaves(1.9)
         console.log('clicked');
         document.getElementById('loading').style.display = 'flex';
         document.getElementById('homework').style.display = 'none';
@@ -24,6 +33,8 @@ export default function Params() {
           mistakes: mistakes.value
         }
     console.log(data);
+    
+    increaseWaves(3.5)
     try {
     const resd = await fetch('https://nomework-api2.onrender.com/textprompt/', {
     method: 'POST',
@@ -32,6 +43,7 @@ export default function Params() {
     },
     body: JSON.stringify(data)
     })
+    increaseWaves(5)
     const result = await resd.json();
     console.log(result);
         if(result.result){
@@ -43,13 +55,17 @@ export default function Params() {
           const canv = document.getElementById('note');
           canv.innerText = result.result;
         }
-         
+    promptField.innerText = '';
+    level.value = 'kids';
+    characters.value = '100';
+    mistakes.value = 'no';
+    increaseWaves(-2)
     } catch (error) {
     console.log(error);
     }
       }
   return (
-    <div id="inputs" style={{minHeight: "100vh",display: "flex", flexDirection: "column", justifyContent: "start", alignItems: "center", width: "100%"}}>
+    <div id="inputs" style={{minHeight: "100vh",display: "none", flexDirection: "column", justifyContent: "start", alignItems: "center", width: "100%"}}>
               <h2 style={{paddingBottom:"5vh",paddingTop: "7vh"}}>Help us make your answer <i>yours</i></h2>
               <div style={{width: "100%", paddingTop: "2vh", paddingBottom: "2vh"}}>
                 <label className="block" for="Level"

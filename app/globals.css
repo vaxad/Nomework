@@ -14,6 +14,7 @@ body {
   --promptField-bg : linear-gradient(19deg, #808080 0%, #454040 100%);
   --font-color-primary: #333;
   --elevation-background: #1d1d1d;
+  --featureCard-bg: rgb(203, 213, 225);
   --link-color: #006eb8;
   --font-family-primary: 'monument', sans-serif;
   --handwriting-font: 'Homemade Apple', cursive;
@@ -25,7 +26,7 @@ body {
   --primary-button-color: #eee;
   --font-color-delete: #dc3545;
   --delete-button-borders: #dc3545;
-
+  --loading-spinner-color: #000;
   width: 100%;
   overflow-x: hidden;
 }
@@ -36,11 +37,14 @@ body.dark {
   --elevation-background: #f3f3f3;
   --link-color: #09f;
   --label-color: #aaa;
+  --featureCard-bg: rgb(30, 41, 59);
   --field-borders: #e0e0e0;
   --primary-button-bg: #eee;
   --primary-button-color: #333;
   --delete-button-borders: #e76f7b;
   --font-color-delete: #e76f7b;
+  --loading-spinner-color: #fff;
+
 }
 
 button, .move-left, .move-right{
@@ -117,6 +121,11 @@ h1, h2, h3, h4 .navlink, .generate-image-button{
   color: var(--font-color-primary);
 }
 
+hr{
+  height: 1px;
+  border: none;
+  background-color: var(--font-color-primary);
+}
 .generate-image-button, .download-image-button{
   background-color: #234cd5;
   background: var(--blue-gradient);
@@ -560,7 +569,8 @@ input[type='file']::before {
   left: 0;
   width: 100%;
   height: 100%;
-  transform: scaleY(0.9) scaleX(1.25);
+  transform: scaleY(0.6) scaleX(1.5);
+  transition: all 0.5s ease-in-out;
   transform-origin: bottom;
   box-sizing: border-box;
   display: block;
@@ -578,7 +588,7 @@ input[type='file']::before {
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background: #fff;
+  background: var(--loading-spinner-color);
   animation: lds-grid 1.2s linear infinite;
 }
 .lds-grid div:nth-child(1) {

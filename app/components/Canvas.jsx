@@ -7,13 +7,13 @@ export default function Canvas() {
         <form id="generate-image-form">
           {/* <!-- Generate Image Section --> */}
           <div className="display-flex output-grid responsive-flex">
-            <div className="flex-1 page-container-super">
+            <div className="flex-1 page-container-super  flex justify-center items-center">
               {/* <!-- <div>
                 <h2 style="marginTop: 0px;">Input</h2>
                 <label className="block" for="note">Type/Paste text here</label>
               </div> --> */}
 
-              <div className="flex-1 page-container">
+              <div className="flex-1 page-container w-full flex justify-center items-center">
                 <div className="page-a margined lines">
                   <div contenteditable="true" className="top-margin"></div>
                   <div className="display-flex left-margin-and-content">
