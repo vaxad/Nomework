@@ -9,12 +9,12 @@ export default function page() {
           <hr className=' w-full'/>
           <div className={` h-fit flex flex-col ${open?"":"bg-transparent"}`}>
           <div className={` w-full flex flex-row justify-between items-center gap-10 ${open?"pt-5 pb-2":"py-5"} px-5`}>
-          <h1 className=' text-2xl'><span className=' text-4xl text-purple-500'>Q: </span>{faq.question}</h1>
-          <svg onClick={()=>{setopen(!open)}} xmlns="http://www.w3.org/2000/svg" x="0px" className={` text-purple-500 hover:scale-110 transition-all ${open?"rotate-45":"rotate-0"}`} fill='currentColor' y="0px" width="24" height="24" viewBox="0 0 24 24">
+          <h1 className=' text-lg md:text-xl lg:text-2xl w-11/12'><span className=' text-xl md:text-3xl lg:text-4xl text-purple-500'>Q: </span>{faq.question}</h1>
+          <svg onClick={()=>{setopen(!open)}} xmlns="http://www.w3.org/2000/svg" x="0px" className={` text-purple-500 hover:scale-110 w-[25px] h-[25px] transition-all ${open?"rotate-45":"rotate-0"}`} fill='currentColor' y="0px" viewBox="0 0 24 24">
 <path fill-rule="evenodd" d="M 11 2 L 11 11 L 2 11 L 2 13 L 11 13 L 11 22 L 13 22 L 13 13 L 22 13 L 22 11 L 13 11 L 13 2 Z"></path>
 </svg>
           </div>
-          <p className={` ${open?"block":"hidden"} ml-20 pb-5`}>{faq.answer}</p>
+          <p className={` ${open?"block":"hidden"} ml-6 md:ml-20 pb-5`}>{faq.answer}</p>
           </div>
         </div>
       )

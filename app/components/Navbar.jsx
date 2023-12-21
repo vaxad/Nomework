@@ -1,9 +1,21 @@
 "use client"
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 export default function Navbar() {
     const [nav, setnav] = useState(false)
+    useEffect(() => {
+      const localPreference = typeof (window) !== "undefined" ? window.localStorage.getItem('prefers-theme') : 'dark';
+    if (localPreference) {
+      if (localPreference === 'light') 
+      document.getElementById('logo').src = '/logoblack.png'
+      else 
+      document.getElementById('logo').src = '/logowhite.png';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.getElementById('logo').src = '/logowhite.png'
+    }
+    }, [])
+    
     function toggleTheme() {
         let toggleButton = document.getElementById("toggler")
         if (document.body.classList.contains('dark')) {
