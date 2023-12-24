@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Nomework
+
+## Overview
+
+This web application leverages Gemini AI to generate text based on user prompts and presents the output in a manuscript-styled manner. Users can customize various parameters such as font style, shadow, spacing, and margins. Additionally, the application provides the unique feature of handwriting imitation, allowing users to scan their own handwriting and incorporate it into the generated canvas.
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Web browser (Chrome, Firefox, Safari recommended)
+- Node
+- Internet connection
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Usage
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+1. Clone the repository to your local machine:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+   ```bash
+   git clone https://github.com/vaxad/Nomework.git
+   ```
 
-## Learn More
+2. Change into the project directory:
 
-To learn more about Next.js, take a look at the following resources:
+   ```bash
+   cd Nomework
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. Install the required dependencies:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+   ```bash
+   npm install
+   ```
+4. Setup the Backend:
 
-## Deploy on Vercel
+   ```bash
+   npm install
+   npm run dev
+   ```
+5. Use the website:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+a. Enter the assignment prompt in the designated field.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+b. Specify the characteristics of the person writing the assignment (kid, teenager, adult), the desired length of the assignment, and the number of grammatical mistakes (some/few/many/none).
+  
+c. Click on the "Generate" button.
+
+### Features
+
+- Text Generation: Utilizes Gemini AI to generate text based on user prompts.
+- Customization: Allows users to customize fonts, shadows, spacing, and margins for the generated text.
+- Handwriting Imitation: Enables users to scan their handwriting for incorporation into the generated canvas.(Coming Soon)
+- Download Options: Users can download individual images or generate a single PDF containing the entire canvas.
+
+## Implementation
+
+The project is implemented using NextJs and ExpressJs. Gemini AI is integrated to facilitate text generation, and various parameters are adjusted dynamically based on user input. The canvas is created using HTML5 canvas elements, and user-customizable options are implemented through JavaScript.
+
+## How Nomework Works
+
+1. **Prompt Processing:** The user provides details such as the kind of person writing the assignment, length, and grammatical mistakes.
+2. **Text Generation:** Gemini AI generates the text based on the user's prompt.
+3. **Handwriting Scanning:** Users can upload an image of their handwriting.
+4. **Text-to-Image Conversion:** The scanned handwriting is converted into a TrueType Font (TTF) file, which is used to define the style.
+5. **Canvas Rendering:** The generated text and user-customized parameters are applied to the canvas using the specified style.
+
+## Acknowledgments
+
+Special thanks to Gemini AI for providing the text generation capabilities used in this project.
+
+## Contributors
+
+1. [Tirath Bhathawala (ML)](https://github.com/Tirath5504)
+2. [Varad Prabhu (Web)](https://github.com/vaxad)
+3. [Siddhant Uniyal (ML)](https://github.com/siddhant-uniyal)
+4. [Shubham Jaiswar (ML)](https://github.com/shubhamjaiswar43)
