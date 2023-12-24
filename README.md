@@ -1,5 +1,5 @@
 13
-https://res.cloudinary.com/db670bhmc/image/upload/v1703398829/Screenshot_2023-12-24_115014_idkbye.png
+![image](https://res.cloudinary.com/db670bhmc/image/upload/v1703398829/Screenshot_2023-12-24_115014_idkbye.png)
 
 ---
 # Nomework
