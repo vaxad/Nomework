@@ -39,11 +39,9 @@ This web application leverages Gemini AI to generate text based on user prompts 
    ```
 5. Use the website:
 
-a. Enter the assignment prompt in the designated field.
-
-b. Specify the characteristics of the person writing the assignment (kid, teenager, adult), the desired length of the assignment, and the number of grammatical mistakes (some/few/many/none).
-  
-c. Click on the "Generate" button.
+- Enter the assignment prompt in the designated field.
+- Specify the characteristics of the person writing the assignment (kid, teenager, adult), the desired length of the assignment, and the number of grammatical mistakes (some/few/many/none).
+- Click on the "Generate" button.
 
 ### Features
 
