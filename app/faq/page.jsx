@@ -1,11 +1,12 @@
 "use client";
+import { motion } from 'framer-motion';
 import React, { useState } from 'react'
 
 export default function page() {
-    const FaqCard = ({faq}) => {
+    const FaqCard = ({faq, index}) => {
       const [open, setopen] = useState(false)
       return(
-        <div className=' w-full flex flex-col'>
+        <motion.div  initial={{opacity:0, y:50, x:0}} whileInView={{opacity:1, x:0, y:0}} viewport={{once:true}} transition={{duration:0.8+(index*3/10), ease:"linear", type:"spring"}}   className=' w-full flex flex-col'>
           <hr className=' w-full'/>
           <div className={` h-fit flex flex-col ${open?"":"bg-transparent"}`}>
           <div className={` w-full flex flex-row justify-between items-center gap-10 ${open?"pt-5 pb-2":"py-5"} px-5`}>
@@ -16,7 +17,7 @@ export default function page() {
           </div>
           <p className={` ${open?"block":"hidden"} ml-6 md:ml-20 pb-5`}>{faq.answer}</p>
           </div>
-        </div>
+        </motion.div>
       )
     }
     const faqs=[
@@ -45,13 +46,13 @@ export default function page() {
   return (
     <div>
        <div className=' min-h-screen px-5 md:px-12 lg:px-24 py-6 flex flex-col justify-start items-center w-full'>
-        <h1 className=' text-4xl text-center py-10'>Frequently Asked Questions🥸</h1>
+        <motion.h1  initial={{opacity:0, y:0, x:0}} whileInView={{opacity:1, x:0, y:0}} viewport={{once:true}} transition={{duration:1, ease:"linear", type:"spring"}}   className=' text-4xl text-center py-10'>Frequently Asked Questions🥸</motion.h1>
         <div className=' flex flex-col w-full'>
             {faqs.map((faq, index)=>(
-                <FaqCard key={index} faq={faq}/>
+                <FaqCard key={index} faq={faq} index={index}/>
             ))}
         </div>
-        <hr className=' w-full'/>
+        <motion.hr  initial={{opacity:0, y:0, x:0, scaleX:0}} whileInView={{opacity:1, x:0, y:0, scaleX:1}} viewport={{once:true}} transition={{duration:1+((faqs.length*3)/10), ease:"linear", type:"spring"}}   className=' w-full'/>
     </div>
     </div>
   )

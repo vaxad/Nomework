@@ -85,7 +85,7 @@ export default function Page() {
   return (
     <div className='w-full outline-white-900 overflow-y-hidden  min-h-screen '>
       <h1 className=' text-4xl text-center py-10'>Developed By DjDawgs🚀</h1>
-      <div className=" w-full grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 pb-12  px-12 flex-wrap gap-8 min-h-[60vh] items-start justify-center">
+      <div className=" w-full grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 pb-12 px-5  md:px-12 flex-wrap gap-8 min-h-[60vh] items-start justify-center">
         {members.map((member, index) => (
           <ArcCard key={index} name={member.name} title={member.title} url={member.url} college={member.college} img={member.img} />
         ))}

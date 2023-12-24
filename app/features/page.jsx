@@ -1,3 +1,5 @@
+"use client"
+import { motion } from 'framer-motion'
 import React from 'react'
 
 export default function Page() {
@@ -36,18 +38,18 @@ export default function Page() {
       
       const FeatureCard = ({feature}) => {
         return(
-            <div className=' w-full rounded-xl flex md:flex-row flex-col justify-start gap-10 shadow-sm hover:scale-105 transition-all shadow-slate-900 items-center p-10' style={{backgroundColor:"var(--featureCard-bg)"}}>
-                <h1 className=' text-4xl p-5 bg-purple-500 rounded-full'>{feature.icon}</h1>
+            <motion.div initial={{opacity:0, y:50}} whileInView={{opacity:1, y:0}} viewport={{once:true}} transition={{duration:0.6, ease:"linear", type:"spring"}} className=' w-full rounded-xl flex md:flex-row flex-col justify-start gap-10 shadow-sm hover:scale-105 transition-all shadow-slate-900 items-center p-10' style={{backgroundColor:"var(--featureCard-bg)"}}>
+                <motion.h1 initial={{opacity:0, x:-50}} whileInView={{opacity:1, x:0}} viewport={{once:true}} transition={{duration:0.9, ease:"linear", type:"spring"}} className=' text-4xl p-5 bg-purple-500 rounded-full'>{feature.icon}</motion.h1>
                 <div className=' flex flex-col justify-start w-full items-start'>
-                    <h1 className=' text-2xl w-full text-center md:text-left'>{feature.title}</h1>
-                    <p className=' text-lg w-full text-center md:text-left'>{feature.description}</p>
+                    <motion.h1 initial={{opacity:0, x:50}} whileInView={{opacity:1, x:0}} viewport={{once:true}} transition={{duration:1.2, ease:"linear", type:"spring"}} className=' text-2xl w-full text-center md:text-left'>{feature.title}</motion.h1>
+                    <motion.p initial={{opacity:0, x:50}} whileInView={{opacity:1, x:0}} viewport={{once:true}} transition={{duration:1.5, ease:"linear", type:"spring"}} className=' text-lg w-full text-center md:text-left'>{feature.description}</motion.p>
                     </div>
-            </div>
+            </motion.div>
         )
       }
   return (
     <div className=' min-h-screen px-5 md:px-12 lg:px-24 py-12 flex flex-col justify-center items-center w-full gap-10'>
-        <h1 className=' text-4xl text-center'>Features That We Offer😎</h1>
+        <motion.h1 initial={{opacity:0}} whileInView={{opacity:1}} viewport={{once:true}} transition={{duration:0.6, ease:"easeIn"}} className=' text-4xl text-center'>Features That We Offer😎</motion.h1>
         <div className=' flex flex-col gap-10 w-full'>
             {features.map((feature, index)=>(
                 <FeatureCard key={index} feature={feature}/>

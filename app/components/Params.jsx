@@ -1,4 +1,5 @@
 "use client"
+import { motion } from 'framer-motion';
 import React from 'react'
 
 export default function Params() {
@@ -66,8 +67,8 @@ export default function Params() {
       }
   return (
     <div id="inputs" style={{minHeight: "100vh",display: "none", flexDirection: "column", justifyContent: "start", alignItems: "center", width: "100%"}}>
-              <h2 style={{paddingBottom:"5vh",paddingTop: "7vh"}}>Help us make your answer <i>yours</i></h2>
-              <div style={{width: "100%", paddingTop: "2vh", paddingBottom: "2vh"}}>
+              <h2 className=' text-xl font-bold' style={{paddingBottom:"5vh",paddingTop: "7vh"}}>Help us make your answer <i>yours</i></h2>
+              <motion.div  initial={{opacity:0, y:0, x:-50}} whileInView={{opacity:1, x:0, y:0}} viewport={{once:true}} transition={{duration:1, ease:"linear", type:"spring"}}   style={{width: "100%", paddingTop: "2vh", paddingBottom: "2vh"}}>
                 <label className="block" for="Level"
                   >Level</label>
                 <select id="level" style={{width: "100%"}}>
@@ -84,8 +85,8 @@ export default function Params() {
                     Adults
                   </option>
                 </select>
-              </div>
-              <div style={{width: "100%",paddingTop: "2vh", paddingBottom: "2vh"}}>
+              </motion.div>
+              <motion.div initial={{opacity:0, y:0, x:-50}} whileInView={{opacity:1, x:0, y:0}} viewport={{once:true}} transition={{duration:1.3, ease:"linear", type:"spring"}}  style={{width: "100%",paddingTop: "2vh", paddingBottom: "2vh"}}>
                 <label className="block" for="characters"
                   >Number of characters</label>
                 <select id="characters" style={{width: "100%"}}>
@@ -105,8 +106,8 @@ export default function Params() {
                   <option value="900">900</option>
                   <option value="1000">1000</option>
                 </select>
-              </div>
-              <div style={{width: "100%", paddingTop: "2vh", paddingBottom: "2vh"}}>
+              </motion.div>
+              <motion.div initial={{opacity:0, y:0, x:-50}} whileInView={{opacity:1, x:0, y:0}} viewport={{once:true}} transition={{duration:1.6, ease:"linear", type:"spring"}}  style={{width: "100%", paddingTop: "2vh", paddingBottom: "2vh"}}>
                 <label className="block" for="vocab"
                   >Mistakes</label>
                 <select id="mistakes" style={{width: "100%"}}>
@@ -123,17 +124,20 @@ export default function Params() {
                     Many
                   </option>
                 </select>
-              </div>
-              <button
+              </motion.div>
+              <motion.button
+              initial={{opacity:0, y:0, x:0}} whileInView={{opacity:1, x:0, y:0}} viewport={{once:true}} transition={{duration:1, ease:"easeIn", type:"spring"}} 
               id="prompt"
               className="button generate-image-button"
               style={{width: "100%", color: "#434343", marginTop: "5vh"}}
               onClick={()=>getData()}
             >
               Generate Text
-            </button>
+            </motion.button>
             <div className=' h-full flex flex-col justify-center items-center w-full lg:hidden md:hidden '>
-                <img src="/params.png" alt="" className=' w-4/5 mt-5' />
+                <motion.img initial={{y:50}}
+        animate={{ y:25 }}
+        transition={{ repeat: Infinity, repeatType:"reverse", duration: 3 }} src="/params.png" alt="" className=' w-4/5 mt-5' />
             </div>
             </div>
   )

@@ -30,7 +30,7 @@ export default function Loading() {
   return (
     <div id="loading" style={{display: "none",flexDirection:"column",gap:"50px", width: "100%", justifyContent: "center", alignItems: "center", minHeight: "100vh"}}>
       <div className="lds-grid" ><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
-      <h1 className=' text-lg '>{randomString}</h1>
+      <h1 className=' text-lg w-full text-center '>{randomString}</h1>
     </div>
   )
 }

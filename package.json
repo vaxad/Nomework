@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@gradio/client": "^0.9.4",
+    "eventsource": "^2.0.2",
     "framer-motion": "^10.16.16",
     "html2canvas": "^1.4.1",
     "next": "14.0.4",
