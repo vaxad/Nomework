@@ -54,7 +54,8 @@ export default function Params() {
         document.getElementById('outputContainer').style.display = 'block';
           scrollToDiv('homework');
           const canv = document.getElementById('note');
-          canv.innerText = result.result;
+          const temp = result.result.replace(/\*\*/g, '');
+          canv.innerText = temp;
         }
     promptField.innerText = '';
     level.value = 'kids';

@@ -43,10 +43,11 @@ export default function Navbar() {
   return (
     <>
     <div className=' flex flex-row w-full md:justify-evenly justify-between  lg:px-0 md:px-0 lg:justify-evenly items-center  '>
-        <img id='logo' className=' hidden lg:block md:block' src='/logoblack.png' 
+        
+        <Link href={'/'}><img id='logo' className=' hidden lg:block md:block' src='/logoblack.png' 
          width="140px" style={{ left: "60px", top:"60px"}} alt="nomework">
 
-            </img>
+            </img></Link>
       
     <div className=' hidden lg:flex md:flex' style={{flexDirection: "row", gap: "2vw", justifyContent: "start", alignItems: "center"}}>
         <Link href={'/'} className="navlink">Home</Link>
