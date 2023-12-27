@@ -44,7 +44,7 @@ export default function Navbar() {
     <>
     <div className=' flex flex-row w-full md:justify-evenly justify-between  lg:px-0 md:px-0 lg:justify-evenly items-center  '>
         
-        <Link href={'/'}><img id='logo' className=' hidden lg:block md:block' src='/logoblack.png' 
+        <Link className=' hidden lg:block md:block' href={'/'}><img id='logo' src='/logoblack.png' 
          width="140px" style={{ left: "60px", top:"60px"}} alt="nomework">
 
             </img></Link>
@@ -78,7 +78,7 @@ export default function Navbar() {
         title="Toggle Dark Mode"
         // aria-pressed="false"
         onClick={()=>toggleTheme()}
-        className="dark-mode-toggle z-10 "
+        className={`dark-mode-toggle z-10 ${nav?" opacity-0 md:opacity-100":" opacity-100"} transition-all}`}
       >
         <span className="sun">
           <img
